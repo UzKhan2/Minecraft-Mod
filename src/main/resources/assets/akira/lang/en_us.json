@@ -11,5 +11,7 @@
     "block.akira.nether_sapphire_ore": "Nether Sapphire Ore",
     "block.akira.end_stone_sapphire_ore": "Endstone Sapphire Ore",
 
+    "block.akira.sound_block": "Sound Block",
+
     "creativetab.tutorial_tab": "Sapphire Tab"
 }

@@ -3,6 +3,7 @@ package com.khan.akira.block;
 import java.util.function.Supplier;
 
 import com.khan.akira.akira;
+import com.khan.akira.block.custom.SoundBlock;
 import com.khan.akira.item.ModItems;
 
 import net.minecraft.util.valueproviders.UniformInt;
@@ -49,6 +50,9 @@ public class ModBlocks {
                                         BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(5f)
                                                         .requiresCorrectToolForDrops(),
                                         UniformInt.of(3, 6)));
+
+        public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
+                        () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toRetrun = BLOCKS.register(name, block);

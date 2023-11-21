@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "akira:block/sound_block"
+        }
+    }
+}
