@@ -1,0 +1,15 @@
+{
+    "item.akira.sapphire": "Sapphire",
+    "item.akira.raw_sapphire": "Raw Sapphire",
+
+    "item.akira.metal_detector": "Metal Detector",
+
+    "block.akira.sapphire_block": "Block of Sapphire",
+    "block.akira.raw_sapphire_block": "Block of Raw Sapphire",
+    "block.akira.sapphire_ore": "Sapphire Ore",
+    "block.akira.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+    "block.akira.nether_sapphire_ore": "Nether Sapphire Ore",
+    "block.akira.end_stone_sapphire_ore": "Endstone Sapphire Ore",
+
+    "creativetab.tutorial_tab": "Sapphire Tab"
+}

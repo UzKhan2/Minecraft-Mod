@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+      {
+        "item": "akira:sapphire_block"
+      }
+    ],
+    "result": {
+      "item": "akira:sapphire",
+      "count": 9
+    }
+  }
