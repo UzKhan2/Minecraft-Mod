@@ -4,6 +4,10 @@
 
     "item.akira.metal_detector": "Metal Detector",
 
+    "item.akira.strawberry": "Strawberry",
+
+    "item.akira.pine_cone": "Pine Cone",
+
     "block.akira.sapphire_block": "Block of Sapphire",
     "block.akira.raw_sapphire_block": "Block of Raw Sapphire",
     "block.akira.sapphire_ore": "Sapphire Ore",
@@ -13,5 +17,7 @@
 
     "block.akira.sound_block": "Sound Block",
 
-    "creativetab.tutorial_tab": "Sapphire Tab"
+    "tooltip.akira.metal_detector.tooltip": "Find valuables underground",
+
+    "creativetab.mod_tab": "Mod Tab"
 }
