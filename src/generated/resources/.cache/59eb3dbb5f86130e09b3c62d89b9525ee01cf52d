@@ -1,0 +1,8 @@
+// 1.20.1	2023-11-24T15:45:56.784579	Loot Tables
+83b7fb2606ccb3534a082aa4e394c51b17b146ba data/akira/loot_tables/blocks/deepslate_sapphire_ore.json
+f4cf9a5e23a46ff720ea1557f24d3676d2de4730 data/akira/loot_tables/blocks/end_stone_sapphire_ore.json
+db2eebf88c9fc4278fb8307f24bff1151c02067b data/akira/loot_tables/blocks/nether_sapphire_ore.json
+9bdd892aa6d597ff2cedd56a7ab051e585b51cd1 data/akira/loot_tables/blocks/raw_sapphire_block.json
+df647fb48b3028ee12198828fb940e91df75cc86 data/akira/loot_tables/blocks/sapphire_block.json
+3817c76285c51ed09bd0613db110c44d046bc1e1 data/akira/loot_tables/blocks/sapphire_ore.json
+cf49646daf7176910a63e0fa7a2cb93dde71c539 data/akira/loot_tables/blocks/sound_block.json

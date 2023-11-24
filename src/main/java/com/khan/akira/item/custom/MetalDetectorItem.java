@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
-import com.khan.akira.util.Modtags;
+import com.khan.akira.util.ModTags;
 
 import java.util.List;
 
@@ -65,6 +65,6 @@ public class MetalDetectorItem extends Item {
     }
 
     private boolean isValuableBlock(BlockState state) {
-        return state.is(Modtags.Blocks.METAL_DETECTOR_VALUABLES);
+        return state.is(ModTags.Blocks.METAL_DETECTOR_VALUABLES);
     }
 }
