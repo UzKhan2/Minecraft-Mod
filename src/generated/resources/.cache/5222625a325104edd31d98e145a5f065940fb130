@@ -1,6 +1,15 @@
-// 1.20.1	2023-11-24T15:45:56.7751164	Item Models: akira
+// 1.20.1	2023-11-24T16:38:38.4749636	Item Models: akira
 f5ca420287d8a00e303b2d05b4f7a6934ec2d49b assets/akira/models/item/metal_detector.json
 bdecba8dc4ec2c4140c4810b40b323044ea62cb1 assets/akira/models/item/pine_cone.json
 e183f6355d1b197db353feb03cd937290f66bae4 assets/akira/models/item/raw_sapphire.json
 4f2f7ec20e162ebf95cf42116d26b798e2aa2dfc assets/akira/models/item/sapphire.json
+2e4e6b37d8be6326341068cad68ff580af551f57 assets/akira/models/item/sapphire_buttons.json
+1062121bfe1ee34638e2c2a970f005208ac1484a assets/akira/models/item/sapphire_door.json
+278d75c5856655f1aa17b1ab2449527f2627e566 assets/akira/models/item/sapphire_fence.json
+ef9cabc382f0591b27a804a0716be3c3c517c5f2 assets/akira/models/item/sapphire_fence_gate.json
+84b256ae0838d12c94840446a528ce0057abaf50 assets/akira/models/item/sapphire_pressure_plate.json
+dfa3d0a648860836af7433390aed294af6e54910 assets/akira/models/item/sapphire_slab.json
+e9e479dc86cc23eb662070cb952ff72c7804d293 assets/akira/models/item/sapphire_stairs.json
+fc8777da33832132b3eb5db6831fca05db8c65a3 assets/akira/models/item/sapphire_trapdoor.json
+ccf0f530291e8ec6931b8e8bb3f0d200e6096f30 assets/akira/models/item/sapphire_wall.json
 86a07f8e8c500bad1b586b21bdf353621f8c6aa4 assets/akira/models/item/strawberry.json
