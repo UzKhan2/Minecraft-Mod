@@ -1,23 +1,33 @@
 {
-    "item.akira.sapphire": "Sapphire",
-    "item.akira.raw_sapphire": "Raw Sapphire",
+  "item.akira.sapphire": "Sapphire",
+  "item.akira.raw_sapphire": "Raw Sapphire",
 
-    "item.akira.metal_detector": "Metal Detector",
+  "item.akira.metal_detector": "Metal Detector",
 
-    "item.akira.strawberry": "Strawberry",
+  "item.akira.strawberry": "Strawberry",
 
-    "item.akira.pine_cone": "Pine Cone",
+  "item.akira.pine_cone": "Pine Cone",
 
-    "block.akira.sapphire_block": "Block of Sapphire",
-    "block.akira.raw_sapphire_block": "Block of Raw Sapphire",
-    "block.akira.sapphire_ore": "Sapphire Ore",
-    "block.akira.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
-    "block.akira.nether_sapphire_ore": "Nether Sapphire Ore",
-    "block.akira.end_stone_sapphire_ore": "Endstone Sapphire Ore",
+  "block.akira.sapphire_block": "Block of Sapphire",
+  "block.akira.raw_sapphire_block": "Block of Raw Sapphire",
+  "block.akira.sapphire_ore": "Sapphire Ore",
+  "block.akira.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.akira.nether_sapphire_ore": "Nether Sapphire Ore",
+  "block.akira.end_stone_sapphire_ore": "Endstone Sapphire Ore",
 
-    "block.akira.sound_block": "Sound Block",
+  "block.akira.sapphire_stairs": "Sapphire Stairs",
+  "block.akira.sapphire_slab": "Sapphire Slab",
+  "block.akira.sapphire_button": "Sapphire Button",
+  "block.akira.sapphire_pressure_plate": "Sapphire Pressure Plate",
+  "block.akira.sapphire_fence": "Sapphire Fence",
+  "block.akira.sapphire_fence_gate": "Sapphire Fence Gate",
+  "block.akira.sapphire_wall": "Sapphire Wall",
+  "block.akira.sapphire_door": "Sapphire Door",
+  "block.akira.sapphire_trapdoor": "Sapphire Trapdoor",
 
-    "tooltip.akira.metal_detector.tooltip": "Find valuables underground",
+  "block.akira.sound_block": "Sound Block",
 
-    "creativetab.mod_tab": "Mod Tab"
+  "tooltip.akira.metal_detector.tooltip": "Find valuables underground",
+
+  "creativetab.mod_tab": "Mod Tab"
 }

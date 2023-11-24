@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "akira:block/sapphire_slab"
+    },
+    "type=double": {
+      "model": "akira:block/sapphire_block"
+    },
+    "type=top": {
+      "model": "akira:block/sapphire_slab_top"
+    }
+  }
+}
