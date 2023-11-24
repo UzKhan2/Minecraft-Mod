@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "akira:sapphire_buttons"
+          "name": "akira:sapphire_button"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "akira:blocks/sapphire_buttons"
+  "random_sequence": "akira:blocks/sapphire_button"
 }
