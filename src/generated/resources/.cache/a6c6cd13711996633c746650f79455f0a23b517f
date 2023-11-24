@@ -1,7 +1,0 @@
-// 1.20.1	2023-11-24T16:38:38.4613868	Tags for minecraft:block mod id akira
-88b5346f705c0810487a97850cc6279d8a3fc7ea data/akira/tags/blocks/metal_detector_valuables.json
-312f69af728a39bd98aa45774f8eaabf4456cb7e data/minecraft/tags/blocks/fences.json
-51e0a2d439f55181591da986719cf9939eb5cd48 data/minecraft/tags/blocks/fence_gates.json
-ef0208594ea2667b9acd0533f02e9ba72ee9d1ee data/minecraft/tags/blocks/mineable/pickaxe.json
-d997ada363bc6210a9349302b1b2b85424b52025 data/minecraft/tags/blocks/needs_iron_tool.json
-1e75a09bb9a59b70d2777745bdeb69fe305a9e53 data/minecraft/tags/blocks/walls.json
