@@ -9,6 +9,17 @@
 
   "item.akira.pine_cone": "Pine Cone",
 
+  "item.akira.sapphire_sword": "Sapphire Sword",
+  "item.akira.sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.akira.sapphire_axe": "Sapphire Axe",
+  "item.akira.sapphire_shovel": "Sapphire Shovel",
+  "item.akira.sapphire_hoe": "Sapphire Hoe",
+
+  "item.akira.sapphire_helmet": "Sapphire Helemt",
+  "item.akira.sapphire_chestplate": "Sapphire Chestplate",
+  "item.akira.sapphire_leggings": "Sapphire Leggings",
+  "item.akira.sapphire_boots": "Sapphire Boots",
+
   "block.akira.sapphire_block": "Block of Sapphire",
   "block.akira.raw_sapphire_block": "Block of Raw Sapphire",
   "block.akira.sapphire_ore": "Sapphire Ore",
