@@ -3,6 +3,7 @@ package com.khan.akira;
 import com.khan.akira.block.ModBlocks;
 import com.khan.akira.item.ModCreativeModeTabs;
 import com.khan.akira.item.ModItems;
+import com.khan.akira.loot.ModLootModifiers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,6 +28,8 @@ public class akira {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

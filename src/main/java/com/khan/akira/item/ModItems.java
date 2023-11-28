@@ -3,6 +3,7 @@ package com.khan.akira.item;
 import com.khan.akira.akira;
 import com.khan.akira.item.custom.FuelItem;
 import com.khan.akira.item.custom.MetalDetectorItem;
+import com.khan.akira.item.custom.ModArmorItem;
 
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
@@ -49,7 +50,8 @@ public class ModItems {
                         () -> new HoeItem(ModToolTiers.SAPPHIRE, 0, 0, new Item.Properties()));
 
         public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
-                        () -> new ArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET, new Item.Properties()));
+                        () -> new ModArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.HELMET,
+                                        new Item.Properties()));
         public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate",
                         () -> new ArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.CHESTPLATE,
                                         new Item.Properties()));
