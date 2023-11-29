@@ -1,6 +1,7 @@
 package com.khan.akira.item;
 
 import com.khan.akira.akira;
+import com.khan.akira.block.ModBlocks;
 import com.khan.akira.item.custom.FuelItem;
 import com.khan.akira.item.custom.MetalDetectorItem;
 import com.khan.akira.item.custom.ModArmorItem;
@@ -9,6 +10,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
@@ -60,6 +62,9 @@ public class ModItems {
                                         new Item.Properties()));
         public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
                         () -> new ArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+        public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
+                        () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
 
         public static void register(IEventBus eventBus) {
                 ITEMS.register(eventBus);

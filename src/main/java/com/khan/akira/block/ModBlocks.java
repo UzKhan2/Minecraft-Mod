@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import com.khan.akira.akira;
 import com.khan.akira.block.custom.SoundBlock;
+import com.khan.akira.block.custom.StrawberryCropBlock;
 import com.khan.akira.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -102,6 +103,10 @@ public class ModBlocks {
         public static final RegistryObject<Block> SAPPHIRE_TRAPDOOR = registerBlock("sapphire_trapdoor",
                         () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                                         .sound(SoundType.AMETHYST).noOcclusion(), BlockSetType.IRON));
+
+        public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
+                        () -> new StrawberryCropBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
         public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
                         () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));

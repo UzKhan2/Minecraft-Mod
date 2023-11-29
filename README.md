@@ -12,6 +12,7 @@ This is a custom Minecraft mod for the 1.20.1 version of Java Minecraft. This is
 
 - [x] Added a new ore
 - [x] Added unique items
+- [x] Added custom crops
 - [x] Added custom tools
 - [x] Added custom armor
 - [x] Added a JSON data generators
