@@ -5,11 +5,13 @@
   "item.akira.metal_detector": "Metal Detector",
   "item.akira.sapphire_staff": "Sapphire Staff",
 
-  "item.akira.strawberry": "Strawberry",
-
   "item.akira.pine_cone": "Pine Cone",
 
+  "item.akira.strawberry": "Strawberry",
   "item.akira.strawberry_seeds": "Strawberry Seeds",
+
+  "item.akira.corn": "Corn",
+  "item.akira.corn_seeds": "Corn Seeds",
 
   "item.akira.sapphire_sword": "Sapphire Sword",
   "item.akira.sapphire_pickaxe": "Sapphire Pickaxe",
