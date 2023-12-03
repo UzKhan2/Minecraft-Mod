@@ -3,11 +3,13 @@ package com.khan.akira.block;
 import java.util.function.Supplier;
 
 import com.khan.akira.akira;
+import com.khan.akira.block.custom.CornCropBlock;
 import com.khan.akira.block.custom.SoundBlock;
 import com.khan.akira.block.custom.StrawberryCropBlock;
 import com.khan.akira.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -17,6 +19,8 @@ import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -107,6 +111,18 @@ public class ModBlocks {
         public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
                         () -> new StrawberryCropBlock(
                                         BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+        public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+                        () -> new CornCropBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+        public static final RegistryObject<Block> CATMINT = registerBlock("catmint",
+                        () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
+                                        BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+        public static final RegistryObject<Block> POTTED_CATMINT = BLOCKS.register("potted_catmint",
+                        () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CATMINT,
+                                        BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
         public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
                         () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));

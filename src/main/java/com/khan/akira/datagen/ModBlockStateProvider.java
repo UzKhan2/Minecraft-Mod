@@ -3,6 +3,7 @@ package com.khan.akira.datagen;
 import com.google.common.base.Function;
 import com.khan.akira.akira;
 import com.khan.akira.block.ModBlocks;
+import com.khan.akira.block.custom.CornCropBlock;
 import com.khan.akira.block.custom.StrawberryCropBlock;
 
 import net.minecraft.data.PackOutput;
@@ -62,6 +63,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
                 blockWithItem(ModBlocks.SOUND_BLOCK);
                 makeStrawberryCrop((CropBlock) ModBlocks.STRAWBERRY_CROP.get(), "strawberry_stage", "strawberry_stage");
+                makeCornCrop(((CropBlock) ModBlocks.CORN_CROP.get()), "corn_stage_", "corn_stage_");
+
+                simpleBlockWithItem(ModBlocks.CATMINT.get(),
+                                models().cross(blockTexture(ModBlocks.CATMINT.get()).getPath(),
+                                                blockTexture(ModBlocks.CATMINT.get())).renderType("cutout"));
+                simpleBlockWithItem(ModBlocks.POTTED_CATMINT.get(),
+                                models().singleTexture("potted_catmint", new ResourceLocation("flower_pot_cross"),
+                                                "plant",
+                                                blockTexture(ModBlocks.CATMINT.get())).renderType("cutout"));
         }
 
         public void makeStrawberryCrop(CropBlock block, String modelName, String textureName) {
@@ -79,6 +89,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
                                                 new ResourceLocation(akira.MODID, "block/" + textureName
                                                                 + state.getValue(((StrawberryCropBlock) block)
                                                                                 .getAgeProperty())))
+                                .renderType("cutout"));
+
+                return models;
+        }
+
+        public void makeCornCrop(CropBlock block, String modelName, String textureName) {
+                Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName,
+                                textureName);
+
+                getVariantBuilder(block).forAllStates(function);
+        }
+
+        private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
+                ConfiguredModel[] models = new ConfiguredModel[1];
+                models[0] = new ConfiguredModel(models()
+                                .crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
+                                                new ResourceLocation(akira.MODID,
+                                                                "block/" + textureName
+                                                                                + state.getValue(((CornCropBlock) block)
+                                                                                                .getAgeProperty())))
                                 .renderType("cutout"));
 
                 return models;

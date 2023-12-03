@@ -1,6 +1,7 @@
 package com.khan.akira.datagen.loot;
 
 import com.khan.akira.block.ModBlocks;
+import com.khan.akira.block.custom.CornCropBlock;
 import com.khan.akira.block.custom.StrawberryCropBlock;
 import com.khan.akira.item.ModItems;
 
@@ -70,6 +71,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 this.add(ModBlocks.SAPPHIRE_DOOR.get(),
                                 block -> createDoorTable(ModBlocks.SAPPHIRE_DOOR.get()));
 
+                this.dropSelf(ModBlocks.CATMINT.get());
+                this.add(ModBlocks.POTTED_CATMINT.get(), createPotFlowerItemTable(ModBlocks.CATMINT.get()));
+
                 LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
                                 .hasBlockStateProperties(ModBlocks.STRAWBERRY_CROP.get())
                                 .setProperties(StatePropertiesPredicate.Builder.properties()
@@ -78,6 +82,24 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 this.add(ModBlocks.STRAWBERRY_CROP.get(),
                                 createCropDrops(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY.get(),
                                                 ModItems.STRAWBERRY_SEEDS.get(), lootitemcondition$builder));
+
+                LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
+                                .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                                .hasProperty(CornCropBlock.AGE, 7))
+                                .or(LootItemBlockStatePropertyCondition
+                                                .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                                                .hasProperty(CornCropBlock.AGE, 8)));
+
+                // LootItemCondition.Builder lootitemcondition$builder2 =
+                // LootItemBlockStatePropertyCondition
+                // .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                // .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE,
+                // 8));
+
+                this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(),
+                                ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
 
         }
 

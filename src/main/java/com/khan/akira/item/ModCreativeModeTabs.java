@@ -34,6 +34,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
                         pOutput.accept(ModItems.CORN.get());
                         pOutput.accept(ModItems.CORN_SEEDS.get());
+                        pOutput.accept(ModBlocks.CATMINT.get());
                         pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
                         pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
                         pOutput.accept(ModItems.SAPPHIRE_PICKAXE.get());

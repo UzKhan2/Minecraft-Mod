@@ -48,6 +48,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PINE_CONE);
         simpleItem(ModItems.STRAWBERRY);
         simpleItem(ModItems.STRAWBERRY_SEEDS);
+        simpleItem(ModItems.CORN);
+        simpleItem(ModItems.CORN_SEEDS);
+
+        simpleBlockItemBlockTexture(ModBlocks.CATMINT);
 
         simpleBlockItem(ModBlocks.SAPPHIRE_DOOR);
 
@@ -142,6 +146,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     public void evenSimplerBlockItem(RegistryObject<Block> block) {
         this.withExistingParent(akira.MODID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                        new ResourceLocation(akira.MODID, "block/" + item.getId().getPath()));
     }
 
     public void trapdoorItem(RegistryObject<Block> block) {

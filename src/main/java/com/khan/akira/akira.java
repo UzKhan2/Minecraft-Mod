@@ -4,8 +4,11 @@ import com.khan.akira.block.ModBlocks;
 import com.khan.akira.item.ModCreativeModeTabs;
 import com.khan.akira.item.ModItems;
 import com.khan.akira.loot.ModLootModifiers;
+import com.khan.akira.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -30,6 +33,7 @@ public class akira {
         ModBlocks.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -38,6 +42,9 @@ public class akira {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CATMINT.getId(), ModBlocks.POTTED_CATMINT);
+        });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

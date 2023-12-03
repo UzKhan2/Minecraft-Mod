@@ -5,7 +5,6 @@ import com.khan.akira.block.ModBlocks;
 import com.khan.akira.item.custom.FuelItem;
 import com.khan.akira.item.custom.MetalDetectorItem;
 import com.khan.akira.item.custom.ModArmorItem;
-
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
@@ -30,9 +29,6 @@ public class ModItems {
 
         public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
                         () -> new MetalDetectorItem(new Item.Properties().durability(100)));
-
-        public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
-                        () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
 
         public static final RegistryObject<Item> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff",
                         () -> new Item(new Item.Properties().stacksTo(1)));
@@ -63,13 +59,17 @@ public class ModItems {
         public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
                         () -> new ArmorItem(ModArmorMaterials.SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Properties()));
 
+        public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
+                        () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+
         public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
                         () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
 
-        public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
-                        () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
         public static final RegistryObject<Item> CORN = ITEMS.register("corn",
                         () -> new Item(new Item.Properties()));
+
+        public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
+                        () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
 
         public static void register(IEventBus eventBus) {
                 ITEMS.register(eventBus);

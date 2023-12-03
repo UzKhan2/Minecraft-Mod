@@ -13,6 +13,8 @@
   "item.akira.corn": "Corn",
   "item.akira.corn_seeds": "Corn Seeds",
 
+  "block.akira.catmint": "Catmint",
+
   "item.akira.sapphire_sword": "Sapphire Sword",
   "item.akira.sapphire_pickaxe": "Sapphire Pickaxe",
   "item.akira.sapphire_axe": "Sapphire Axe",
@@ -44,6 +46,8 @@
   "block.akira.sound_block": "Sound Block",
 
   "tooltip.akira.metal_detector.tooltip": "Find valuables underground",
+
+  "entity.minecraft.villager.akira.soundmaster": "Sound Master",
 
   "creativetab.mod_tab": "Mod Tab"
 }
