@@ -15,4 +15,5 @@ This is a custom Minecraft mod for the 1.20.1 version of Java Minecraft. This is
 - [x] Added custom crops
 - [x] Added custom tools
 - [x] Added custom armor
+- [x] Added new villager professions
 - [x] Added a JSON data generators

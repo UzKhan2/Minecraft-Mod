@@ -4,6 +4,7 @@ import com.khan.akira.block.ModBlocks;
 import com.khan.akira.item.ModCreativeModeTabs;
 import com.khan.akira.item.ModItems;
 import com.khan.akira.loot.ModLootModifiers;
+import com.khan.akira.sound.ModSounds;
 import com.khan.akira.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -34,6 +35,7 @@ public class akira {
 
         ModLootModifiers.register(modEventBus);
         ModVillagers.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

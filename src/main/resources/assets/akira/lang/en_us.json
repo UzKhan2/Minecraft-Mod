@@ -3,6 +3,7 @@
   "item.akira.raw_sapphire": "Raw Sapphire",
 
   "item.akira.metal_detector": "Metal Detector",
+
   "item.akira.sapphire_staff": "Sapphire Staff",
 
   "item.akira.pine_cone": "Pine Cone",
@@ -44,6 +45,9 @@
   "block.akira.sapphire_trapdoor": "Sapphire Trapdoor",
 
   "block.akira.sound_block": "Sound Block",
+
+  "item.akira.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.akira.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
 
   "tooltip.akira.metal_detector.tooltip": "Find valuables underground",
 

@@ -1,0 +1,34 @@
+{
+  "metal_detector_found_ore": {
+    "subtitles": "sounds.akira.metal_detector_found_ore",
+    "sounds": ["akira:metal_detector_found_ore"]
+  },
+  "sound_block_break": {
+    "subtitle": "sounds.akira.sound_block_break",
+    "sounds": ["akira:sound_block_break"]
+  },
+  "sound_block_step": {
+    "subtitle": "sounds.akira.sound_block_step",
+    "sounds": ["akira:sound_block_step"]
+  },
+  "sound_block_place": {
+    "subtitle": "sounds.akira.sound_block_place",
+    "sounds": ["akira:sound_block_place"]
+  },
+  "sound_block_hit": {
+    "subtitle": "sounds.akira.sound_block_hit",
+    "sounds": ["akira:sound_block_hit"]
+  },
+  "sound_block_fall": {
+    "subtitle": "sounds.akira.sound_block_fall",
+    "sounds": ["akira:sound_block_fall"]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "akira:bar_brawl",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -7,6 +7,8 @@ import com.khan.akira.block.custom.CornCropBlock;
 import com.khan.akira.block.custom.SoundBlock;
 import com.khan.akira.block.custom.StrawberryCropBlock;
 import com.khan.akira.item.ModItems;
+import com.khan.akira.sound.ModSounds;
+
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
@@ -125,7 +127,9 @@ public class ModBlocks {
                                         BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
 
         public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
-                        () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+                        () -> new SoundBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                                                        .sound(ModSounds.SOUND_BLOCK_SOUNDS)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toRetrun = BLOCKS.register(name, block);
