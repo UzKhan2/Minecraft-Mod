@@ -1,12 +1,16 @@
 package com.khan.akira;
 
 import com.khan.akira.block.ModBlocks;
+import com.khan.akira.entity.ModEntities;
+import com.khan.akira.entity.client.RhinoRenderer;
 import com.khan.akira.item.ModCreativeModeTabs;
 import com.khan.akira.item.ModItems;
 import com.khan.akira.loot.ModLootModifiers;
 import com.khan.akira.sound.ModSounds;
 import com.khan.akira.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
+
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -36,6 +40,7 @@ public class akira {
         ModLootModifiers.register(modEventBus);
         ModVillagers.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -65,6 +70,7 @@ public class akira {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
         }
     }
 }
