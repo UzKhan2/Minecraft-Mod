@@ -1,6 +1,7 @@
 package com.khan.akira;
 
 import com.khan.akira.block.ModBlocks;
+import com.khan.akira.block.entity.ModBlockEntities;
 import com.khan.akira.entity.ModEntities;
 import com.khan.akira.entity.client.RhinoRenderer;
 import com.khan.akira.item.ModCreativeModeTabs;
@@ -10,6 +11,7 @@ import com.khan.akira.sound.ModSounds;
 import com.khan.akira.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -42,6 +44,9 @@ public class akira {
         ModSounds.register(modEventBus);
         ModEntities.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -71,6 +76,8 @@ public class akira {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
         }
     }
 }

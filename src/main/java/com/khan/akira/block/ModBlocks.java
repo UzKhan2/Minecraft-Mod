@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import com.khan.akira.akira;
 import com.khan.akira.block.custom.CornCropBlock;
+import com.khan.akira.block.custom.GemPolishingStationBlock;
 import com.khan.akira.block.custom.SoundBlock;
 import com.khan.akira.block.custom.StrawberryCropBlock;
 import com.khan.akira.item.ModItems;
@@ -125,6 +126,10 @@ public class ModBlocks {
         public static final RegistryObject<Block> POTTED_CATMINT = BLOCKS.register("potted_catmint",
                         () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CATMINT,
                                         BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion()));
+
+        public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
+                        () -> new GemPolishingStationBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
         public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
                         () -> new SoundBlock(
