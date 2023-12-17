@@ -7,6 +7,9 @@ import com.khan.akira.entity.client.RhinoRenderer;
 import com.khan.akira.item.ModCreativeModeTabs;
 import com.khan.akira.item.ModItems;
 import com.khan.akira.loot.ModLootModifiers;
+import com.khan.akira.recipe.ModRecipes;
+import com.khan.akira.screen.GemPolishingStationScreen;
+import com.khan.akira.screen.ModMenuTypes;
 import com.khan.akira.sound.ModSounds;
 import com.khan.akira.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
@@ -46,6 +49,8 @@ public class akira {
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
