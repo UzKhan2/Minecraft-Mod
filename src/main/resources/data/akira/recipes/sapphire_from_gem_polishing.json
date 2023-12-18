@@ -1,0 +1,12 @@
+{
+  "type": "akira:gem_polishing",
+  "ingredients": [
+    {
+      "item": "akira:raw_sapphire"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "akira:sapphire"
+  }
+}
