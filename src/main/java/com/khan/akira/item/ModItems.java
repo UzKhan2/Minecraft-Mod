@@ -10,12 +10,14 @@ import com.khan.akira.sound.ModSounds;
 
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.RecordItem;
 import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.SignItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -40,6 +42,13 @@ public class ModItems {
 
         public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
                         () -> new FuelItem(new Item.Properties(), 400));
+
+        public static final RegistryObject<Item> PINE_SIGN = ITEMS.register("pine_sign",
+                        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.PINE_SIGN.get(),
+                                        ModBlocks.PINE_WALL_SIGN.get()));
+        public static final RegistryObject<Item> PINE_HANGING_SIGN = ITEMS.register("pine_hanging_sign",
+                        () -> new HangingSignItem(ModBlocks.PINE_HANGING_SIGN.get(),
+                                        ModBlocks.PINE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 
         public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
                         () -> new SwordItem(ModToolTiers.SAPPHIRE, 4, 2, new Item.Properties()));

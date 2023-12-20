@@ -11,10 +11,12 @@ import com.khan.akira.recipe.ModRecipes;
 import com.khan.akira.screen.GemPolishingStationScreen;
 import com.khan.akira.screen.ModMenuTypes;
 import com.khan.akira.sound.ModSounds;
+import com.khan.akira.util.ModWoodTypes;
 import com.khan.akira.villager.ModVillagers;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -80,6 +82,8 @@ public class akira {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.PINE);
+
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
 
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);

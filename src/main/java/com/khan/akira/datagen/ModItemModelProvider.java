@@ -58,6 +58,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItemBlockTexture(ModBlocks.CATMINT);
 
+        simpleItem(ModItems.PINE_SIGN);
+        simpleItem(ModItems.PINE_HANGING_SIGN);
+
         simpleBlockItem(ModBlocks.SAPPHIRE_DOOR);
 
         evenSimplerBlockItem(ModBlocks.SAPPHIRE_STAIRS);

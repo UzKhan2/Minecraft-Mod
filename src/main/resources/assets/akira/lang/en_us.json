@@ -20,6 +20,16 @@
 
   "block.akira.gem_polishing_station": "Gem Polishing Station",
 
+  "block.akira.pine_log": "Pine Log",
+  "block.akira.pine_planks": "Pine Planks",
+  "block.akira.pine_wood": "Pine Wood",
+  "block.akira.stripped_pine_log": "Stripped Pine Log",
+  "block.akira.stripped_pine_wood": "Stripped Pine Wood",
+  "block.akira.pine_leaves": "Pine Leaves",
+
+  "block.akira.pine_sign": "Pine Sign",
+  "block.akira.pine_hanging_sign": "Pine Hanging Sign",
+
   "item.akira.sapphire_sword": "Sapphire Sword",
   "item.akira.sapphire_pickaxe": "Sapphire Pickaxe",
   "item.akira.sapphire_axe": "Sapphire Axe",

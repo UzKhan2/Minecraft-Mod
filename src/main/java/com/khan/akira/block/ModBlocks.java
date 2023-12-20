@@ -1,20 +1,22 @@
 package com.khan.akira.block;
 
 import java.util.function.Supplier;
-
+import net.minecraft.world.level.BlockGetter;
 import com.khan.akira.akira;
-import com.khan.akira.block.custom.CornCropBlock;
-import com.khan.akira.block.custom.GemPolishingStationBlock;
-import com.khan.akira.block.custom.SoundBlock;
-import com.khan.akira.block.custom.StrawberryCropBlock;
+import com.khan.akira.block.custom.*;
 import com.khan.akira.item.ModItems;
 import com.khan.akira.sound.ModSounds;
+import com.khan.akira.util.ModWoodTypes;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ButtonBlock;
@@ -24,6 +26,7 @@ import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -31,6 +34,7 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -131,10 +135,78 @@ public class ModBlocks {
                         () -> new GemPolishingStationBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+        public static final RegistryObject<Block> PINE_LOG = registerBlock("pine_log",
+                        () -> new ModFlammableRotatedPillarBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+        public static final RegistryObject<Block> PINE_WOOD = registerBlock("pine_wood",
+                        () -> new ModFlammableRotatedPillarBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(3f)));
+        public static final RegistryObject<Block> STRIPPED_PINE_LOG = registerBlock("stripped_pine_log",
+                        () -> new ModFlammableRotatedPillarBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+        public static final RegistryObject<Block> STRIPPED_PINE_WOOD = registerBlock("stripped_pine_wood",
+                        () -> new ModFlammableRotatedPillarBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+
+        public static final RegistryObject<Block> PINE_PLANKS = registerBlock("pine_planks",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                                @Override
+                                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos,
+                                                Direction direction) {
+                                        return true;
+                                }
+
+                                @Override
+                                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos,
+                                                Direction direction) {
+                                        return 20;
+                                }
+
+                                @Override
+                                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos,
+                                                Direction direction) {
+                                        return 5;
+                                }
+                        });
+        public static final RegistryObject<Block> PINE_LEAVES = registerBlock("pine_leaves",
+                        () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                                @Override
+                                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos,
+                                                Direction direction) {
+                                        return true;
+                                }
+
+                                @Override
+                                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos,
+                                                Direction direction) {
+                                        return 60;
+                                }
+
+                                @Override
+                                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos,
+                                                Direction direction) {
+                                        return 30;
+                                }
+                        });
+
         public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
                         () -> new SoundBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                                                         .sound(ModSounds.SOUND_BLOCK_SOUNDS)));
+
+        public static final RegistryObject<Block> PINE_SIGN = BLOCKS.register("pine_sign",
+                        () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN),
+                                        ModWoodTypes.PINE));
+        public static final RegistryObject<Block> PINE_WALL_SIGN = BLOCKS.register("pine_wall_sign",
+                        () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN),
+                                        ModWoodTypes.PINE));
+
+        public static final RegistryObject<Block> PINE_HANGING_SIGN = BLOCKS.register("pine_hanging_sign",
+                        () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN),
+                                        ModWoodTypes.PINE));
+        public static final RegistryObject<Block> PINE_WALL_HANGING_SIGN = BLOCKS.register("pine_wall_hanging_sign",
+                        () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN),
+                                        ModWoodTypes.PINE));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toRetrun = BLOCKS.register(name, block);

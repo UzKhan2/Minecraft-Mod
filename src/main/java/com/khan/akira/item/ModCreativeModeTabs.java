@@ -39,6 +39,17 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.CORN.get());
                         pOutput.accept(ModItems.CORN_SEEDS.get());
                         pOutput.accept(ModBlocks.CATMINT.get());
+
+                        pOutput.accept(ModBlocks.PINE_LOG.get());
+                        pOutput.accept(ModBlocks.PINE_WOOD.get());
+                        pOutput.accept(ModBlocks.STRIPPED_PINE_LOG.get());
+                        pOutput.accept(ModBlocks.STRIPPED_PINE_WOOD.get());
+                        pOutput.accept(ModBlocks.PINE_PLANKS.get());
+                        pOutput.accept(ModBlocks.PINE_LEAVES.get());
+
+                        pOutput.accept(ModItems.PINE_SIGN.get());
+                        pOutput.accept(ModItems.PINE_HANGING_SIGN.get());
+
                         pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
                         pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
                         pOutput.accept(ModItems.SAPPHIRE_PICKAXE.get());
