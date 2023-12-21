@@ -3,6 +3,7 @@ package com.khan.akira;
 import com.khan.akira.block.ModBlocks;
 import com.khan.akira.block.entity.ModBlockEntities;
 import com.khan.akira.entity.ModEntities;
+import com.khan.akira.entity.client.ModBoatRenderer;
 import com.khan.akira.entity.client.RhinoRenderer;
 import com.khan.akira.item.ModCreativeModeTabs;
 import com.khan.akira.item.ModItems;
@@ -85,6 +86,8 @@ public class akira {
             Sheets.addWoodType(ModWoodTypes.PINE);
 
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+            EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
+            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
 
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
         }

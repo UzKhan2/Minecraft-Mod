@@ -3,9 +3,11 @@ package com.khan.akira.item;
 import com.khan.akira.akira;
 import com.khan.akira.block.ModBlocks;
 import com.khan.akira.entity.ModEntities;
+import com.khan.akira.entity.custom.ModBoatEntity;
 import com.khan.akira.item.custom.FuelItem;
 import com.khan.akira.item.custom.MetalDetectorItem;
 import com.khan.akira.item.custom.ModArmorItem;
+import com.khan.akira.item.custom.ModBoatItem;
 import com.khan.akira.sound.ModSounds;
 
 import net.minecraft.world.item.ArmorItem;
@@ -49,6 +51,11 @@ public class ModItems {
         public static final RegistryObject<Item> PINE_HANGING_SIGN = ITEMS.register("pine_hanging_sign",
                         () -> new HangingSignItem(ModBlocks.PINE_HANGING_SIGN.get(),
                                         ModBlocks.PINE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
+        public static final RegistryObject<Item> PINE_BOAT = ITEMS.register("pine_boat",
+                        () -> new ModBoatItem(false, ModBoatEntity.Type.PINE, new Item.Properties()));
+        public static final RegistryObject<Item> PINE_CHEST_BOAT = ITEMS.register("pine_chest_boat",
+                        () -> new ModBoatItem(true, ModBoatEntity.Type.PINE, new Item.Properties()));
 
         public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
                         () -> new SwordItem(ModToolTiers.SAPPHIRE, 4, 2, new Item.Properties()));
