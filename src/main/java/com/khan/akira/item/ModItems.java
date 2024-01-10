@@ -4,6 +4,7 @@ import com.khan.akira.akira;
 import com.khan.akira.block.ModBlocks;
 import com.khan.akira.entity.ModEntities;
 import com.khan.akira.entity.custom.ModBoatEntity;
+import com.khan.akira.item.custom.DiceItem;
 import com.khan.akira.item.custom.FuelItem;
 import com.khan.akira.item.custom.MetalDetectorItem;
 import com.khan.akira.item.custom.ModArmorItem;
@@ -56,6 +57,9 @@ public class ModItems {
                         () -> new ModBoatItem(false, ModBoatEntity.Type.PINE, new Item.Properties()));
         public static final RegistryObject<Item> PINE_CHEST_BOAT = ITEMS.register("pine_chest_boat",
                         () -> new ModBoatItem(true, ModBoatEntity.Type.PINE, new Item.Properties()));
+
+        public static final RegistryObject<Item> DICE = ITEMS.register("dice",
+                        () -> new DiceItem(new Item.Properties()));
 
         public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
                         () -> new SwordItem(ModToolTiers.SAPPHIRE, 4, 2, new Item.Properties()));

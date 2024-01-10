@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "number=up": {
+      "model": "akira:block/dice_1"
+    },
+    "number=north": {
+      "model": "akira:block/dice_2"
+    },
+    "number=east": {
+      "model": "akira:block/dice_3"
+    },
+    "number=south": {
+      "model": "akira:block/dice_5"
+    },
+    "number=west": {
+      "model": "akira:block/dice_4"
+    },
+    "number=down": {
+      "model": "akira:block/dice_6"
+    }
+  }
+}

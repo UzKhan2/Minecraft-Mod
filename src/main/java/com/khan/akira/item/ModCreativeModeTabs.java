@@ -53,6 +53,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.PINE_BOAT.get());
                         pOutput.accept(ModItems.PINE_CHEST_BOAT.get());
 
+                        pOutput.accept(ModItems.DICE.get());
+
                         pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
                         pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
                         pOutput.accept(ModItems.SAPPHIRE_PICKAXE.get());
