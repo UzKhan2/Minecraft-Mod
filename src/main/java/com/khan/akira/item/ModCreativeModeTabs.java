@@ -46,6 +46,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.STRIPPED_PINE_WOOD.get());
                         pOutput.accept(ModBlocks.PINE_PLANKS.get());
                         pOutput.accept(ModBlocks.PINE_LEAVES.get());
+                        pOutput.accept(ModBlocks.PINE_SAPLING.get());
 
                         pOutput.accept(ModItems.PINE_SIGN.get());
                         pOutput.accept(ModItems.PINE_HANGING_SIGN.get());
@@ -54,6 +55,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.PINE_CHEST_BOAT.get());
 
                         pOutput.accept(ModItems.DICE.get());
+
+                        pOutput.accept(ModBlocks.MOD_PORTAL.get());
 
                         pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
                         pOutput.accept(ModItems.SAPPHIRE_SWORD.get());

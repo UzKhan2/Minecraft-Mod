@@ -14,6 +14,10 @@ import com.khan.akira.screen.ModMenuTypes;
 import com.khan.akira.sound.ModSounds;
 import com.khan.akira.util.ModWoodTypes;
 import com.khan.akira.villager.ModVillagers;
+import com.khan.akira.worldgen.biome.ModTerrablender;
+import com.khan.akira.worldgen.biome.surface.ModSurfaceRules;
+import com.khan.akira.worldgen.tree.ModFoliagePlacers;
+import com.khan.akira.worldgen.tree.ModTrunkPlacerTypes;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -32,6 +36,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import terrablender.api.SurfaceRuleManager;
+
 import org.slf4j.Logger;
 
 @Mod(akira.MODID)
@@ -55,6 +61,10 @@ public class akira {
         ModMenuTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
+        ModTrunkPlacerTypes.register(modEventBus);
+
+        ModFoliagePlacers.register(modEventBus);
+        ModTerrablender.registerBiomes();
 
         modEventBus.addListener(this::commonSetup);
 
@@ -65,6 +75,9 @@ public class akira {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CATMINT.getId(), ModBlocks.POTTED_CATMINT);
+
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MODID,
+                    ModSurfaceRules.makeRules());
         });
     }
 

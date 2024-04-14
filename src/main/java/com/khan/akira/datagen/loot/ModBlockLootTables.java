@@ -82,8 +82,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 this.dropSelf(ModBlocks.STRIPPED_PINE_WOOD.get());
                 this.dropSelf(ModBlocks.PINE_PLANKS.get());
 
-                this.add(ModBlocks.PINE_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.SAPPHIRE_BLOCK.get(),
-                                NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: Change to Sapling!
+                this.add(ModBlocks.PINE_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.PINE_SAPLING.get(),
+                                NORMAL_LEAVES_SAPLING_CHANCES));
 
                 this.add(ModBlocks.PINE_SIGN.get(), block -> createSingleItemTable(ModItems.PINE_SIGN.get()));
                 this.add(ModBlocks.PINE_WALL_SIGN.get(), block -> createSingleItemTable(ModItems.PINE_SIGN.get()));
@@ -91,6 +91,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 block -> createSingleItemTable(ModItems.PINE_HANGING_SIGN.get()));
                 this.add(ModBlocks.PINE_WALL_HANGING_SIGN.get(),
                                 block -> createSingleItemTable(ModItems.PINE_HANGING_SIGN.get()));
+
+                this.dropSelf(ModBlocks.PINE_SAPLING.get());
 
                 LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
                                 .hasBlockStateProperties(ModBlocks.STRAWBERRY_CROP.get())

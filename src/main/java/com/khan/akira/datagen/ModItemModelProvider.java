@@ -58,6 +58,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItemBlockTexture(ModBlocks.CATMINT);
 
+        saplingItem(ModBlocks.PINE_SAPLING);
+
         simpleItem(ModItems.PINE_SIGN);
         simpleItem(ModItems.PINE_HANGING_SIGN);
 
@@ -136,6 +138,12 @@ public class ModItemModelProvider extends ItemModelProvider {
                                         "item/" + itemRegistryObject.getId().getPath()));
             });
         }
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                        new ResourceLocation(akira.MODID, "block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

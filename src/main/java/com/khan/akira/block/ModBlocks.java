@@ -7,6 +7,7 @@ import com.khan.akira.block.custom.*;
 import com.khan.akira.item.ModItems;
 import com.khan.akira.sound.ModSounds;
 import com.khan.akira.util.ModWoodTypes;
+import com.khan.akira.worldgen.tree.PineTreeGrower;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -28,6 +29,7 @@ import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
@@ -210,6 +212,14 @@ public class ModBlocks {
 
         public static final RegistryObject<Block> DICE_BLOCK = BLOCKS.register("dice_block",
                         () -> new DiceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable()));
+
+        public static final RegistryObject<Block> PINE_SAPLING = registerBlock("pine_sapling",
+                        () -> new SaplingBlock(new PineTreeGrower(),
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> MOD_PORTAL = registerBlock("mod_portal",
+                        () -> new ModPortalBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable()
+                                        .noOcclusion().noCollission()));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toRetrun = BLOCKS.register(name, block);

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "akira:block/mod_portal"
+    }
+  }
+}
